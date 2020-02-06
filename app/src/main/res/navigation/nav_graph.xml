@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/githubIssueFragment">
+
+    <fragment
+        android:id="@+id/githubIssueFragment"
+        android:name="com.sujeet.githubissues.ui.GithubIssueFragment"
+        android:label="github_issue_fragment"
+        tools:layout="@layout/github_issue_fragment" >
+        <action
+            android:id="@+id/action_githubIssueFragment_to_commentListFragment"
+            app:destination="@id/commentListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentListFragment"
+        android:name="com.sujeet.githubissues.ui.comments.CommentListFragment"
+        android:label="fragment_comment_list"
+        tools:layout="@layout/fragment_comment_list" />
+</navigation>
